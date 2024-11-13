@@ -1,0 +1,95 @@
+@mixin small {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin normal {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin extra {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+/*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: 100px 0;
+  }
+}
+
+@keyframes animation-rocket {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-20deg) scale(0.95); }
+  50% { transform: rotate(-30deg); }
+  75% { transform: rotate(-20deg) scale(0.9); }
+  100% { transform: rotate(0); }
+}
+
+
+@keyframes animation-camera {
+  0% { transform: scale(1) rotate(0) }
+  25% { transform: scale(0.95) rotate(0) }
+  50% { transform: scale(1) rotate(10deg) }
+  75% { transform: scale(0.9) rotate(10deg) }
+  100% { transform: scale(1) rotate(0) }
+}
+
+@keyframes zoom-in {
+  0% { transform: scale(1) }
+  25% { transform: scale(0.95) }
+  50% { transform: scale(1) }
+  75% { transform: scale(0.9) }
+  100% { transform: scale(1) }
+}
+
+@keyframes animation-arrow {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(20deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0); }
+}
+
+@keyframes animation-thinking {
+  0% { transform: scale(0) }
+  90% { transform: scale(1.05) }
+  100% { transform: scale(1) }
+}
+
+@keyframes zoomInRight {
+  0% {
+  opacity: 0;
+  -webkit-transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+  transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+  -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+  60% {
+  opacity: 1;
+  -webkit-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+  transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
